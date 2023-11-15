@@ -103,7 +103,7 @@ class LinkedList(Node):
                 print(pointer.value)
                 pointer = pointer.next
 
-    def search(self, item):
+        def search(self, item):
         pointer = self.head
         pos = 1
         if self.isempty() == False:
@@ -112,6 +112,18 @@ class LinkedList(Node):
                     found = "Element found at position: " + str(pos)
                     return found
                 pos += 1
+                pointer = pointer.next
+        return "No such element found"
+    
+    def delete(self, item):
+        pointer = self.head
+        if self.isempty() == False:
+            while pointer is not None:
+                if pointer.next.value == item:
+                    deleted = pointer.next.value
+                    pointer.next = pointer.next.next
+                    return str(deleted)+" was deleted"
+                pointer = pointer.next
         return "No such element found"
 
 
