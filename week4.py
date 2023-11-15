@@ -103,7 +103,7 @@ class LinkedList(Node):
                 print(pointer.value)
                 pointer = pointer.next
 
-        def search(self, item):
+    def search(self, item):
         pointer = self.head
         pos = 1
         if self.isempty() == False:
