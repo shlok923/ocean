@@ -147,7 +147,7 @@ class Playlist():
         if self.head is None:
             self.head = songNode
         else:
-            data.next = self.head
+            songNode.next = self.head
             self.head = data
         self.count += 1
 
