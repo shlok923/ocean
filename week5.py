@@ -177,6 +177,7 @@ class Playlist():
                 if pointer.title == name:
                     found = "Element found at position: " + str(pos)
                     return found
+                pointer = pointer.next    
                 pos += 1
         return "No such element found"
 #chill = Playlist()
